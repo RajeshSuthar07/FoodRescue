@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Don't touch requests for the PHP API — let api/.htaccess handle those.
+RewriteCond %{REQUEST_URI} ^/api/ [NC]
+RewriteRule ^ - [L]
+
+# Serve real files/directories (JS, CSS, images) directly.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Everything else falls back to index.html so React Router can handle it.
+RewriteRule ^ index.html [L]
