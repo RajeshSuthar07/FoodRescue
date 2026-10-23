@@ -10,8 +10,8 @@
 INSERT INTO users (name, email, password, phone, role, address, status)
 VALUES (
     'Rajesh',
-    'foodrescue26@gmail.com',
-    '$2b$10$nJ.Cz3NVshkPNblZ0Xb2UeGGiwniSPK1H1qoBjZUE11DdC5A9VQcu', -- bcrypt hash of: Rajesh@Admin1
+    'example@gmail.com',
+    '$2b$10$nJ.Cz3NVshkPNblZ0Xb2UeGGiwniSPK1H1qoBjZUE11DdC5A9VQcu',
     NULL,
     'ADMIN',
     NULL,
